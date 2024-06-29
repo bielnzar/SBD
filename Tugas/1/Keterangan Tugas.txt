@@ -1,0 +1,11 @@
+Keterangan Tugas
+
+Website Pengerjaan : https://erdplus.com/
+
+Garis Bawah 	= Unique
+Lingkaran Double= Multivalued
+(o)		= Optional
+( .... )	= Composite
+Lingkaran Putus"= Derived
+
+Semua Fitur merupakan default fitur website

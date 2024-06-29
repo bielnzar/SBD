@@ -1,0 +1,75 @@
+- driver 
+ID_Driver (INT) PK - Auto Increment
+Nama (varchar)
+Alamat (text)
+Foto (blob)
+No_Telepon (varchar)
+Status_Aktif (boolean)
+Rating (decimal)
+Email (varchar)
+
+- kendaraan
+ID_kendaraan (INT) PK - Auto Increment
+ID_Layanan (INT) FK
+Jenis_Kendaraan (varchar)
+No_Plat (varchar)
+Merk (varchar)
+
+- konsumen
+ID_Konsumen (INT) PK - Auto Increment
+Nama (varchar)
+Alamat (varchar)
+No_Telepon (varchar)
+Email (varchar)
+Tanggal_Lahir (date)
+
+- layanan
+ID_Layanan (INT) PK - Auto Increment
+Nama_Layanan (varchar)
+Deskripsi (text)
+
+- order
+ID_Order (INT) PK - Auto Increment
+ID_Driver (INT) FK
+ID_kendaraan (INT) FK
+ID_Konsumen (INT) FK
+Jarak (float)
+Asal (varchar)
+Tujuan (varchar)
+Tarif (float)
+Status_Order (enum)
+Waktu_Pesan (datetime)
+Waktu_Selesai (datetime)
+ID_Lokasi_Asal (INT)
+ID_Lokasi_Tujuan (INT)
+
+- pembayaran
+ID_Pembayaran (INT) PK - Auto Increment
+ID_Order (INT) FK
+ID_Promosi (INT) FK
+Metode_Pembayaran (enum)
+Status_Pembayaran (enum)
+Waktu_Pembayaran (datetime)
+Jumlah (decimal)
+
+- promosi
+ID_Promosi (INT) PK - Auto Increment
+Nama_Promosi (varchar)
+Deskripsi (text)
+Potongan_Harga (decimal)
+Tanggal_Mulai (datetime)
+Tanggal_Selesai (datetime)
+
+- penilaian
+ID_Penilaian (INT) PK - Auto Increment
+ID_Order (INT) FK
+ID_Driver (INT) FK
+Rating (decimal)
+Ulasan (text)
+Tanggal (datetime)
+
+- lokasi
+ID_Lokasi (INT) PK - Auto Increment
+Nama_Lokasi (varchar)
+Latitude (decimal)
+Longitude (decimal)
